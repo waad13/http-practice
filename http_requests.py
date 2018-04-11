@@ -4,17 +4,13 @@ import requests
 def perform_get_request():
     """Perform GET request to given URL and return the response"""
     url = 'https://httpbin.org/get'
-
-    response = requests.get(url)
-    return response
+    pass
 
 
 def perform_get_request_with_params():
     """Perform GET request to given URL sending any parameter and return the response"""
-    url = 'https://httpbin.org/get?user_id=123'
-
-    response = requests.get(url)
-    return response
+    url = 'https://httpbin.org/get'
+    pass
 
 
 def perform_post_request():
@@ -24,9 +20,7 @@ def perform_post_request():
         'first_name': 'Guido',
         'last_name': 'van Rossum'
     }
-
-    response = requests.post(url, json=data)
-    return response
+    pass
 
 
 def perform_put_request():
@@ -36,9 +30,7 @@ def perform_put_request():
         'first_name': 'Guido',
         'last_name': 'van Rossum'
     }
-
-    response = requests.put(url, json=data)
-    return response
+    pass
 
 
 def perform_patch_request():
@@ -47,14 +39,10 @@ def perform_patch_request():
     data = {
         'first_name': 'Guido'
     }
-
-    response = requests.patch(url, json=data)
-    return response
+    pass
 
 
 def perform_delete_request():
     """Perform DELETE request to given URL and return the response"""
     url = 'https://httpbin.org/delete'
-
-    response = requests.delete(url)
-    return response
+    pass
