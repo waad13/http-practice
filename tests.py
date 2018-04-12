@@ -2,7 +2,7 @@ import pytest
 from http_requests import *
 
 
-def test_perform_get_request():
+def test_1_perform_get_request():
     response = perform_get_request()
 
     assert response.status_code == 200
@@ -15,7 +15,7 @@ def test_perform_get_request():
     assert 'url' in response.json()
 
 
-def test_perform_get_request_with_params():
+def test_2_perform_get_request_with_params():
     response = perform_get_request_with_params()
 
     assert response.status_code == 200
@@ -28,7 +28,7 @@ def test_perform_get_request_with_params():
     assert 'url' in response.json()
 
 
-def test_perform_post_request():
+def test_3_perform_post_request():
     response = perform_post_request()
 
     expected = {
@@ -42,7 +42,7 @@ def test_perform_post_request():
     assert response.json()['json'] == expected
 
 
-def test_perform_put_request():
+def test_4_perform_put_request():
     response = perform_put_request()
 
     expected = {
@@ -56,7 +56,7 @@ def test_perform_put_request():
     assert response.json()['json'] == expected
 
 
-def test_perform_patch_request():
+def test_5_perform_patch_request():
     response = perform_patch_request()
 
     expected = {
@@ -69,9 +69,15 @@ def test_perform_patch_request():
     assert response.json()['json'] == expected
 
 
-def test_perform_delete_request():
+def test_6_perform_delete_request():
     response = perform_delete_request()
 
     assert response.status_code == 200
     assert response.request.method == 'DELETE'
     assert response.request.url == 'https://httpbin.org/delete'
+
+
+def test_7_perform_redirect_request():
+    location_header = perform_redirect_request()
+
+    assert location_header == '/get'
