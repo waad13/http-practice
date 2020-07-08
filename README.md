@@ -1,13 +1,5 @@
 # HTTP Practice
 
-<p align="center">
-  <a href="https://www.youtube.com/watch?v=N1BMyypbNaM">
-    <img width="460" height="300" src="http://img.youtube.com/vi/N1BMyypbNaM/maxresdefault.jpg">
-  </a>
-</p>
-<p align="center">
-  <i>(Explanation of project video on YouTube)</i>
-</p>
 Basic practice to learn HTTP concepts using the [`requests`](http://docs.python-requests.org/) python library, and [this website](https://httpbin.org/) that let's you experiment with endpoints for different usages.
 
 You can find the solution to all these exercises inside the `solution` branch of this repository.
